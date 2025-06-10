@@ -11,6 +11,24 @@ body{
     display: flex;
     padding: 50px;
     border: 1px solid red;
-    width: 500px;
+    width: 1000px;
     justify-content: space-around;
+}
+
+.flag-item{
+    display: flex;
+    flex-direction: column;
+}
+
+.flag-item img{
+    width: 150px;
+    height: 90px;
+    object-fit: cover;
+}
+
+.btn{
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
 }
