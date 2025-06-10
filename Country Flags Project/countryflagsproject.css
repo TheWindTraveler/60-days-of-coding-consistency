@@ -31,4 +31,9 @@ body{
     font-size: 17px;
     font-weight: 600;
     text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: blue;
+    text-align: center;
+    color: white;
 }
