@@ -1,0 +1,42 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 8px;
+}
+
+.vertical-buttons {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+}
+
+.btn-equal{
+    margin-top: 5px;
+}
+
+.vertical-buttons button {
+  flex: 1;
+}
+
+.display{
+    padding: 10px;
+    margin: 10px;
+    width: 76%;
+}
+
+.container{
+    border: 1px solid red;
+    padding: 10px 20px 10px 20px;
+}
+
+button {
+    cursor: pointer;
+}
