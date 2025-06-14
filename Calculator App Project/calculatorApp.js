@@ -2,6 +2,7 @@ const numberButtonElement = document.querySelectorAll(".btn-number");
 const operatorButtonElement = document.querySelectorAll(".btn-operator");
 const equalsButtonElement = document.querySelector(".btn-equal");
 const deleteButtonElement = document.querySelector(".delete-button");
+const clearAllButtonElement = document.querySelector(".btn-clear-all");
 
 
 let input = "";
@@ -74,4 +75,14 @@ deleteButtonElement.addEventListener('click', () =>{
         input = input.slice(0, -1);
         document.querySelector(".calculation").textContent = input;
     }
+})
+
+clearAllButtonElement.addEventListener('click', () => {
+    input = "";
+    firstNumber = "";
+    secondNumber = "";
+    operator = "";
+
+    document.querySelector(".calculation").textContent = "";
+    document.querySelector(".result").textContent = "";
 })
