@@ -25,20 +25,37 @@ numberButtonElement.forEach(button => {
 
 operatorButtonElement.forEach(button => {
     button.addEventListener('click', () => {
-        if (!firstNumber){
-            firstNumber = input;
+        if (!operator){
+            if (!firstNumber){
+                firstNumber = input;
+            }
             operator = button.textContent;
             input = "";
+            document.querySelector(".calculation").textContent = `${firstNumber} ${operator}`;
+        } else if (firstNumber && secondNumber) {
+            let result = eval(`${firstNumber}${operator}${secondNumber}`);
+            firstNumber = result.toString();
+            secondNumber = "";
+            operator = button.textContent;
+            input = "";
+
+            document.querySelector(".result").textContent = result;
+            document.querySelector(".calculation").textContent = `${firstNumber} ${operator}`;
         }
-        document.querySelector(".calculation").textContent = firstNumber + " " + operator;
     })
 })
 
 equalsButtonElement.addEventListener('click', function() {
     if (firstNumber && operator && secondNumber) {
-            let expression = firstNumber + operator + secondNumber;
-            let result = eval(expression);
+            let result = eval(`${firstNumber}${operator}${secondNumber}`);
             document.querySelector(".result").textContent = result;
+
+            input = result.toString();
+            firstNumber = result.toString()
+            secondNumber = "";
+            operator = "";
+
+            document.querySelector(".calculation").textContent = result;
     }
 
 });
