@@ -1,6 +1,7 @@
 const numberButtonElement = document.querySelectorAll(".btn-number");
 const operatorButtonElement = document.querySelectorAll(".btn-operator");
 const equalsButtonElement = document.querySelector(".btn-equal");
+const deleteButtonElement = document.querySelector(".delete-button");
 
 
 let input = "";
