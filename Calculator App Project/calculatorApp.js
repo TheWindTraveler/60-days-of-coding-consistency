@@ -21,7 +21,9 @@ numberButtonElement.forEach(button => {
         } else {
             document.querySelector(".calculation").textContent = input;
         }
+        updateEqualButtonState();
     })
+
 })
 
 
@@ -44,6 +46,7 @@ operatorButtonElement.forEach(button => {
             document.querySelector(".result").textContent = result;
             document.querySelector(".calculation").textContent = `${firstNumber} ${operator}`;
         }
+        updateEqualButtonState();
     })
 })
 
@@ -51,7 +54,6 @@ equalsButtonElement.addEventListener('click', function() {
     if (firstNumber && operator && secondNumber) {
             let result = eval(`${firstNumber}${operator}${secondNumber}`);
             document.querySelector(".result").textContent = result;
-
             input = result.toString();
             firstNumber = result.toString()
             secondNumber = "";
@@ -85,4 +87,15 @@ clearAllButtonElement.addEventListener('click', () => {
 
     document.querySelector(".calculation").textContent = "";
     document.querySelector(".result").textContent = "";
+
+    equalsButtonElement.disabled = true;
+
 })
+
+function updateEqualButtonState() {
+    if (firstNumber && operator && secondNumber ){
+        equalsButtonElement.disabled = false;
+    } else {
+        equalsButtonElement.disabled = true;
+    }
+}
