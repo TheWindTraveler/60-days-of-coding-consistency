@@ -11,8 +11,12 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
 }
 
+/* Container */
 .container{
     background-color: white;
     color: black;
@@ -20,4 +24,34 @@ body{
     max-width: 100%;
     width: 800px;
     border-radius: 5px;
+}
+
+h2{
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* Joke Div */
+.joke{
+    line-height: 40px;
+    margin: 50px auto;
+    max-width: 600px;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+/* Button */
+.btn{
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(12, 12, 112);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: rgb(94, 20, 20);
 }
