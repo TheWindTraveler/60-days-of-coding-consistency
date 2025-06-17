@@ -11,11 +11,11 @@ async function generateJokes() {
             Accept: 'application/json',
         },
     }
-    
+
     const res = await fetch('https://icanhazdadjoke.com', config);
     const data = await res.json();
 
     jokeDisplayElement.textContent = data.joke;
 };
 
-generateJokes();
+// generateJokes();
