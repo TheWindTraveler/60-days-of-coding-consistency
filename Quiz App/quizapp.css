@@ -12,5 +12,21 @@ body{
     height: 100vh;
     overflow: hidden;
     margin: 0;
+}
 
+.quiz-container{
+    background-color: white;
+    width: 600px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.quiz-header{
+    padding: 4rem;
+}
+
+h1{
+    padding: 10px;
+    margin: 0;
+    text-align: center;
 }
