@@ -1,3 +1,4 @@
+// DOMs
 const quizElement = document.querySelector("#quiz");
 const answerElement = document.querySelectorAll(".answer");
 const questionElement = document.getElementById("question");
@@ -42,3 +43,62 @@ const quizData = [
         correct: "b",
     },
 ];
+
+//Quiz variables
+let currentQuiz = 0;
+let score = 0;
+
+loadQuiz();
+
+//Load Quiz Function
+function loadQuiz() {
+    deselectAnswer();
+
+    const currentQuizData = quizData[currentQuiz];
+
+    questionElement.textContent = currentQuizData.question;
+    a_textElement.textContent = currentQuizData.a;
+    b_textElement.textContent = currentQuizData.b;
+    c_textElement.textContent = currentQuizData.c;
+    d_textElement.textContent = currentQuizData.d;
+};
+
+//Unselect Function
+function deselectAnswer() {
+    answerElement.forEach(answerElement => answerElement.checked = false);
+};
+
+//Selected Answer Function
+function getSelected() {
+    let answer;
+
+    answerElement.forEach(answerElement => {
+        if(answerElement.checked) {
+            answer = answerElement.id;
+        };
+    });
+
+    return answer;
+};
+
+// Submit Button Event Listener
+submitButtonElement.addEventListener('click', () => {
+    const answer = getSelected();
+
+    if(answer) {
+        if(answer === quizData[currentQuiz].correct) {
+            score++;
+        };
+        currentQuiz ++;
+
+        if(currentQuiz < quizData.length) {
+            loadQuiz();
+        } else {
+            quizElement.innerHTML = `
+                <h1>You answered ${score}/${quizData.length} questions correctly </h1>
+
+                <button onclick="location.reload()">Reload</button>
+            `
+        };
+    };
+});
