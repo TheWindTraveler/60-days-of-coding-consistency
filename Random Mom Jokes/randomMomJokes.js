@@ -1,8 +1,10 @@
 let jokeElement = document.getElementById("joke");
 let jokeButtonElement = document.getElementById("jokebtn");
 
+//Event Listener
 jokeButtonElement.addEventListener('click', generateMomJokes);
 
+// Async Await
 async function generateMomJokes() {
     const config = {
         headers: {
@@ -10,6 +12,7 @@ async function generateMomJokes() {
         },
     };
 
+    // To avoid CORS error from YoMama since they don't allow cross-origin requests
     try {
         const response = await fetch(
             'https://cors-anywhere.herokuapp.com/https://www.yomama-jokes.com/api/v1/jokes/random/',
