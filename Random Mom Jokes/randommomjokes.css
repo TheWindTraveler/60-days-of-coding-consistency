@@ -7,7 +7,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black
+    background-color: black;
+    margin: 0;
 }
 
 .container{
@@ -15,5 +16,33 @@ body {
     width: 100%;
     max-width: 800px;
     text-align: center;
-    padding: 50px;
+    padding: 50px 20px;
+    border-radius: 5px;
+}
+
+h2{
+    margin: 0;
+    font-size: 40px;
+    opacity: 0.7;
+}
+
+.joke{
+    margin: 30px;
+    font-size: 30px;
+}
+
+.btn{
+    padding: 15px 30px;
+    margin: 30px;
+    border: none;
+    background-color: rgb(15, 15, 136);
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn:hover{
+    background-color: rgb(22, 8, 8);
 }
