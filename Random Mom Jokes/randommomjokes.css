@@ -11,6 +11,7 @@ body {
     margin: 0;
 }
 
+/* Container */
 .container{
     background: white;
     width: 100%;
@@ -20,17 +21,20 @@ body {
     border-radius: 5px;
 }
 
+/* Heading */
 h2{
     margin: 0;
     font-size: 40px;
     opacity: 0.7;
 }
 
+/* Jokes Div */
 .joke{
     margin: 30px;
     font-size: 30px;
 }
 
+/* Button and Button Hover */
 .btn{
     padding: 15px 30px;
     margin: 30px;
