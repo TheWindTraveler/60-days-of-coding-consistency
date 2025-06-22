@@ -1,11 +1,11 @@
 
-body{
+body {
     background-color: chocolate;
     margin: 20px;
     padding: 0;
 }
 
-.menu-icon{
+.menu-icon {
     width: 30px;
     height: 25px;
     display: flex;
@@ -13,9 +13,10 @@ body{
     justify-content: space-between;
     cursor: pointer;
     padding: 5px;
+    display: none;
 }
 
-.menu-icon span{
+.menu-icon span {
     height: 4px;
     background: black;
     border-radius: 2px;
@@ -33,13 +34,32 @@ body{
     border-radius: 5px;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
     cursor: pointer;
 }
 
-a:hover{
+a:hover {
     background-color: black;
     padding: 5px 10px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+    }
+
+    .navmenu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .navmenu.active {
+        display: flex;
+    }
 }
