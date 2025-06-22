@@ -15,6 +15,7 @@ body {
     cursor: pointer;
     padding: 5px;
     display: none;
+    transition: all 0.3s ease-in-out;
 }
 
 .menu-icon span {
@@ -22,6 +23,19 @@ body {
     background: black;
     border-radius: 2px;
     width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-icon.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(10px, -10px);
 }
 
 /* Navigation Menu */

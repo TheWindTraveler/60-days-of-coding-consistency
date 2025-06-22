@@ -4,4 +4,5 @@ const NavMenuElement = document.querySelector(".navmenu");
 // NavMenu On click event
 menuIconElement.addEventListener('click', () => {
     NavMenuElement.classList.toggle('active');
+    menuIconElement.classList.toggle('open');
 });
