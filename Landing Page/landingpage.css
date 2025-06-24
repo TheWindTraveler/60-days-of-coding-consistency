@@ -54,12 +54,12 @@ body {
     transition: color 0.3s ease;
 }
 
-.main-nav-menu li a:hover{
+.main-nav-menu li a:hover {
     color: var(--primary-color);
 }
 
 /* Hero Section */
-.hero-section{
+.hero-section {
     padding: 30px;
     text-align: center;
     background-color: var(--primary-color);
@@ -67,11 +67,11 @@ body {
 }
 
 /* Hero Heading and Paragraph */
-.text-heading{
+.text-heading {
     font-size: 80px;
 }
 
-.hero-paragraph{
+.hero-paragraph {
     display: block;
     /* background-color: var(--secondary-color); */
     padding: 10px;
@@ -80,7 +80,7 @@ body {
 }
 
 /* Button */
-.btn{
+.btn {
     padding: 15px;
     border: none;
     background-color: var(--secondary-color);
@@ -105,12 +105,14 @@ body {
     margin: 50px;
 }
 
-.refreshments-types{
+/* Refreshments Types */
+.refreshments-types {
     display: flex;
     flex-direction: column;
 }
 
-.pepsi-types-btn{
+/* Refreshments Button and Hover */
+.pepsi-types-btn {
     padding: 10px;
     margin-top: 10px;
     border: none;
