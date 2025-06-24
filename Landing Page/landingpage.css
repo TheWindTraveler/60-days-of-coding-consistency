@@ -11,6 +11,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: var(--background-color);
 }
 
 /* Container */
@@ -27,7 +28,7 @@ body {
     justify-content: space-between;
     padding: 20px 15px;
     background-color: var(--background-color);
-    border-bottom: 2px solid red;
+    /* border-bottom: 2px solid var(--primary-color); */
 }
 
 /* Logo */
@@ -55,4 +56,24 @@ body {
 
 .main-nav-menu li a:hover{
     color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero-section{
+    padding: 30px;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--color);
+}
+
+.text-heading{
+    font-size: 80px;
+}
+
+.hero-paragraph{
+    display: block;
+    /* background-color: var(--secondary-color); */
+    padding: 10px;
+    font-size: 40px;
+    margin: 30px auto;
 }
