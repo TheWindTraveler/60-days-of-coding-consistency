@@ -135,6 +135,9 @@ footer {
     margin-top: 100px;
     color: var(--color);
     background-color: var(--primary-color);
+}
+
+.footer-container {
     display: flex;
     justify-content: space-around;
 }
@@ -143,11 +146,11 @@ footer {
      font-size: 25px;
 }
 
-.footer-box > ul{
+.footer-box > ul {
     list-style: none;
 }
 
-.footer-box li{
+.footer-box li {
     margin: 10px;
 }
 
@@ -157,7 +160,15 @@ footer {
     color: white;
 }
 
-.footer-box a:hover{
+.footer-box a:hover {
     background-color: var(--secondary-color);
     padding: 10px;
+}
+
+.footer-credit {
+    margin-top: 10px;
+    text-align: center;
+    background-color: white;
+    color: var(--Nav-color);
+    font-size: 15px;
 }
